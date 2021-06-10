@@ -24,43 +24,43 @@
     <h3>36 32174338 조태규</h3>
 </div>
 
-<h4>사전 준비 - putty, puttygen <a href = "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" >다운로드</a> 후 설치</h4>
+<h3>사전 준비 - putty, puttygen <a href = "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" >다운로드</a> 후 설치</h3>
 
-<h4>1. <a href = "https://aws.amazon.com/ko/?nc2=h_lg">Amazon Web Services</a> 홈페이지 가입</h4>
-    <h4>2. EC2 사용한 가상 머신 시작 클릭</h4>
+<h3>1. <a href = "https://aws.amazon.com/ko/?nc2=h_lg">Amazon Web Services</a> 홈페이지 가입</h3>    
+<h3>2. EC2 사용한 가상 머신 시작 클릭</h3>
 <img src = "static/image/2.PNG" width = "1700">
-<h4>3. 원하는 인스턴스 환경 설정 후, 시작하기 클릭</h4>
+<h3>3. 원하는 인스턴스 환경 설정 후, 시작하기 클릭</h3>
 
-<h5>Step 1. Amazon Machine Image(AMI) 선택 - Ubuntu Server 20.04.LTS(HVM), SSD Volume Type</h5>
+<h4>Step 1. Amazon Machine Image(AMI) 선택 - Ubuntu Server 20.04.LTS(HVM), SSD Volume Type</h4>
 <img src = "static/image/3.PNG" width = "1700">
 
-<h5>Step 2. 인스턴스 유형 선택 - t2.micro (- ECU, 1 vCPUs, 2.5 GHz, -, 1 GiB 메모리, EBS 전용)</h5>
+<h4>Step 2. 인스턴스 유형 선택 - t2.micro (- ECU, 1 vCPUs, 2.5 GHz, -, 1 GiB 메모리, EBS 전용)</h4>
 <img src = "static/image/4.PNG" width = "1700">
 
-<h5>Step 3. 인스턴스 구성 - default</h5>
-<h5>Step 4. 스토리지 추가 - default</h5>
-<h5>Step 5. 태그 추가 - default</h5>
+<h4>Step 3. 인스턴스 구성 - default</h4>
+<h4>Step 4. 스토리지 추가 - default</h4>
+<h4>Step 5. 태그 추가 - default</h4>
 
-<h5>Step 6. 보안 그룹 구성 - 사용자 지정 TCP 규칙, 포트 5000번 추가 (웹서버에 사용될 포트)</h5>
+<h4>Step 6. 보안 그룹 구성 - 사용자 지정 TCP 규칙, 포트 5000번 추가 (웹서버에 사용될 포트)</h4>
 <img src = "static/image/5.PNG">
 
-<h4>4. 새 키 페어 생성 후 다운로드</h4>
+<h3>4. 새 키 페어 생성 후 다운로드</h3>
 <img src = "static/image/6.PNG">
-<h4>5. puttygen에서 4에서 다운로드 한 키 파일(.pem) load 후 Save private key 클릭하여 저장</h4>
+<h3>5. puttygen에서 4에서 다운로드 한 키 파일(.pem) load 후 Save private key 클릭하여 저장</h3>
 <img src = "static/image/7.PNG">
-<h4>6. putty 왼쪽 Category - Connection - SSH - Auth private key file for authentication 에서 browse 클릭하여 5에서 저장한 .ppk 파일 선택</h4>
+<h3>6. putty 왼쪽 Category - Connection - SSH - Auth private key file for authentication 에서 browse 클릭하여 5에서 저장한 .ppk 파일 선택</h3>
 <img src = "static/image/8.PNG">
-<h4>7. putty 왼쪽 Category - Session 으로 가 Host name 입력 후, Open 클릭</h4>
+<h3>7. putty 왼쪽 Category - Session 으로 가 Host name 입력 후, Open 클릭</h3>
 <img src = "static/image/9.PNG">
 <img src = "static/image/10.PNG">
-<h4>8. 웹서버 구동에 필요한 파일 설치</h4>
+<h3>8. 웹서버 구동에 필요한 파일 설치</h3>
 $ sudo apt update<br>
 $ sudo apt install python3-pip<br>
 $ sudo apt install git<br>
 $ pip install flask<br>
 
 
-<h4>9. GitHub Repository를 clone 하여 실행</h4>
-<h4><a href = "https://github.com/HASHTAG-YOU/OpenSourceSW">GitHub Repository</a></h4>
+<h3>9. GitHub Repository를 clone 하여 실행</h3>
+<h3><a href = "https://github.com/HASHTAG-YOU/OpenSourceSW">GitHub Repository</a></h3>
 </body>
 </html>
