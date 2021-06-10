@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang ="en">
+
 <head>
+    <style>
+        #box1 { text-align:center;}
+        #box2 { text-align:right;}
+    </style>
+
     <meta charset="UTF-8">
     <meta name ="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OpenSourceSW</title>
 </head>
+
 <body>
-<h1>AWS를 활용한 Web Server 구축</h1>
-<h2>Opensource SW 기말 과제</h2>
-<h3>36 32174338 조태규</h3>
+
+<div id = "box1">
+    <h1>AWS를 활용한 Web Server 구축</h1>
+    <h2>Opensource SW 기말 과제</h2>
+</div>
+
+<div id = "box2">
+    <h3>36 32174338 조태규</h3>
+</div>
 
 <h4>사전 준비 - putty, puttygen <a href = "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" >다운로드</a> 후 설치</h4>
 
@@ -20,11 +33,14 @@
 
 <h5>Step 1. Amazon Machine Image(AMI) 선택 - Ubuntu Server 20.04.LTS(HVM), SSD Volume Type</h5>
 <img src = "static/image/3.PNG" width = "1700">
+
 <h5>Step 2. 인스턴스 유형 선택 - t2.micro (- ECU, 1 vCPUs, 2.5 GHz, -, 1 GiB 메모리, EBS 전용)</h5>
 <img src = "static/image/4.PNG" width = "1700">
+
 <h5>Step 3. 인스턴스 구성 - default</h5>
 <h5>Step 4. 스토리지 추가 - default</h5>
 <h5>Step 5. 태그 추가 - default</h5>
+
 <h5>Step 6. 보안 그룹 구성 - 사용자 지정 TCP 규칙, 포트 5000번 추가 (웹서버에 사용될 포트)</h5>
 <img src = "static/image/5.PNG">
 
@@ -45,6 +61,6 @@ $ pip install flask<br>
 
 
 <h4>9. GitHub Repository를 clone 하여 실행</h4>
-<h5><a href = "https://github.com/HASHTAG-YOU/OpenSourceSW">GitHub Repository</a></h5>
+<h4><a href = "https://github.com/HASHTAG-YOU/OpenSourceSW">GitHub Repository</a></h4>
 </body>
 </html>
