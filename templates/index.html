@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OpenSourceSW</title>
+</head>
+<body>
+<h1>AWS를 활용한 Web Server 구축</h1>
+<h2>Opensource SW 기말 과제</h2>
+<h3>36 32174338 조태규</h3>
+
+<p>사전 준비 - putty, puttygen <a href = "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" >다운로드</a> 후 설치</p>
+
+<p>1. <a href = "https://aws.amazon.com/ko/?nc2=h_lg">Amazon Web Services</a> 홈페이지 가입</p>
+<p>2. EC2 사용한 가상 머신 시작 클릭</p>
+<p>3. 원하는 인스턴스 환경 설정 후, 시작하기 클릭</p>
+
+Step 1. Amazon Machine Image(AMI) 선택 - Ubuntu Server 20.04.LTS(HVM), SSD Volume Type<br>
+Step 2. 인스턴스 유형 선택 - t2.micro (- ECU, 1 vCPUs, 2.5 GHz, -, 1 GiB 메모리, EBS 전용)<br>
+Step 3. 인스턴스 구성 - default<br>
+Step 4. 스토리지 추가 - default<br>
+Step 5. 태그 추가 - default<br>
+Step 6. 보안 그룹 구성 - 사용자 지정 TCP 규칙, 포트 5000번 추가 (웹서버에 사용될 포트)<br>
+
+<p>4. 새 키 페어 생성 후 다운로드</p>
+<p>5. puttygen에서 4에서 다운로드 한 키 파일(.pem) load 후 Save private key 클릭하여 저장</p>
+<p>6. putty 왼쪽 Category - Connection - SSH - Auth private key file for authentication 에서 browse 클릭하여 5에서 저장한 .ppk 파일 선택</p>
+<p>7. putty 왼쪽 Category - Session 으로 가 Host name 입력 후, Open</p>
+
+<p>8. 웹서버 구동에 필요한 파일 설치</p>
+$ sudo apt update<br>
+$ sudo apt install python3-pip<br>
+$ pip install flask<br>
+
+<p>9. flask 파일 코딩 후 실행</p>
+
+</body>
+</html>
